@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online-Autocar-purchase-Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="min-h-screen bg-black">
+  <div class="min-h-screen w-full flex justify-center items-center p-2 sm:p-6">
+    <div class="flex flex-col md:flex-row w-full max-w-7xl bg-white rounded-lg overflow-hidden">
+
+      <!-- Sidebar -->
+      <aside class="w-full md:w-64 bg-white flex-shrink-0 px-4 py-6 border-r">
+        <h1 class="text-2xl font-bold">C<span class="text-[#FF6665]">a</span>rs</h1>
+
+        <!-- Dashboard Button -->
+        <div
+          class="h-10 w-full rounded-xl bg-[#FF6665] text-white my-8 cursor-pointer flex items-center px-4 hover:font-bold">
+          <i class="fa-solid fa-table-columns mr-2"></i>Dashboard
+        </div>
+
+        <!-- Menu -->
+        <ul class="flex flex-col gap-4 text-[#9F9F9F] mb-10 text-sm">
+          <li class="hover:text-gray-700 cursor-pointer"><i class="fa-regular fa-user mr-2"></i>Assets</li>
+          <li class="hover:text-gray-700 cursor-pointer"><i class="fa-solid fa-car mr-2"></i>Booking</li>
+          <li class="hover:text-gray-700 cursor-pointer"><i class="fa-solid fa-bag-shopping mr-2"></i>Sell Cars</li>
+          <li class="hover:text-gray-700 cursor-pointer"><i class="fa-solid fa-cart-shopping mr-2"></i>Buy Cars</li>
+          <li class="hover:text-gray-700 cursor-pointer"><i class="fa-solid fa-scissors mr-2"></i>Services</li>
+          <li class="hover:text-gray-700 cursor-pointer"><i class="fa-regular fa-calendar mr-2"></i>Calender</li>
+        </ul>
+
+        <!-- Footer -->
+        <div class="text-[#9F9F9F] flex flex-col gap-3 text-sm">
+          <p class="cursor-pointer"><i class="fa-solid fa-gear mr-2"></i> Settings</p>
+          <p class="cursor-pointer"><i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Log out</p>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 flex flex-col">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between px-4 sm:px-8 py-4 border-b">
+          <!-- Search -->
+          <div
+            class="flex items-center gap-3 bg-[#F5F4F7] text-gray-700 px-3 py-2 rounded-md flex-1 max-w-xs text-sm">
+            <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+            <input type="text" placeholder="Search or type"
+              class="bg-transparent outline-none w-full text-sm">
+          </div>
+
+          <!-- Right Icons -->
+          <div class="flex items-center gap-4 ml-4">
+            <i class="fa-regular fa-bell cursor-pointer"></i>
+            <div class="h-8 w-8 border rounded-full overflow-hidden">
+              <img src="./assets/face.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Body -->
+        <div class="bg-[#F1F1F1] flex-1 px-4 sm:px-6 py-6 overflow-y-auto">
+
+          <!-- Welcome Row -->
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+            <div>
+              <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">Welcome back, Max</h1>
+              <p class="text-xs sm:text-sm pt-1">Here's what's happening with your store today</p>
+            </div>
+            <div
+              class="flex items-center justify-between bg-white px-3 py-2 rounded-xl text-sm mt-3 sm:mt-0 cursor-pointer">
+              <span>Show Status: <span class="font-semibold">Yearly</span></span>
+              <i class="fa-solid fa-angle-down text-gray-400 ml-2"></i>
+            </div>
+          </div>
+
+          <!-- Featured Cars -->
+          <div class="flex flex-col lg:flex-row gap-6 mb-8">
+            <!-- Big Card -->
+            <div class="bg-[#FBD9D9] rounded-xl p-4 flex-1">
+              <h1 class="text-lg sm:text-xl font-semibold mb-2">2022 Mercedes Benz</h1>
+              <img class="rounded-lg w-full h-auto object-cover" src="./assets/car1.avif" alt="">
+            </div>
+
+            <!-- Side Cards -->
+            <div class="flex flex-col gap-4 flex-1">
+              <div class="flex bg-[#D8D4DC] rounded-lg overflow-hidden">
+                <div class="p-3 w-1/2">
+                  <h2 class="text-sm font-semibold">Range 25%</h2>
+                  <p class="text-xs text-[#78757D]">market average is $16.224</p>
+                </div>
+                <img class="w-1/2 object-cover" src="./assets/car2.png" alt="">
+              </div>
+              <div class="flex bg-[#D8D4DC] rounded-lg overflow-hidden">
+                <div class="p-3 w-1/2">
+                  <h2 class="text-sm font-semibold">Range 25%</h2>
+                  <p class="text-xs text-[#78757D]">market average is $16.224</p>
+                </div>
+                <img class="w-1/2 object-cover" src="./assets/car3.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <!-- Trending Cars -->
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+            <h2 class="text-lg sm:text-xl md:text-2xl font-semibold">Trending Cars</h2>
+            <div class="flex gap-3 mt-3 sm:mt-0">
+              <select class="border rounded-3xl px-3 py-1 text-sm">
+                <option>New</option>
+                <option>Old</option>
+              </select>
+              <select class="border rounded-3xl px-3 py-1 text-sm">
+                <option>Toyota</option>
+                <option>BMW</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Cars Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="rounded-lg bg-[#E0C7FF] p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <p class="text-sm font-semibold">Porshe 718 Cayman S</p>
+                  <span class="text-xs text-[#806C91]">Coupe</span>
+                </div>
+                <i class="fa-solid fa-heart text-red-400"></i>
+              </div>
+              <img class="w-full h-32 object-contain my-3" src="./assets/car-4.png" alt="">
+              <div class="flex justify-between text-sm">
+                <div class="flex gap-4 text-[#806C91]">
+                  <span><i class="fa-regular fa-user text-[#A370E6]"></i> 4</span>
+                  <span><i class="fa-solid fa-share"></i> Manual</span>
+                </div>
+                <p>$400<span class="text-[#806C91]">/d</span></p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="rounded-lg bg-[#FFC6C7] p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <p class="text-sm font-semibold">Porshe 718 Cayman S</p>
+                  <span class="text-xs text-[#806C91]">Coupe</span>
+                </div>
+                <i class="fa-regular fa-heart text-gray-400"></i>
+              </div>
+              <img class="w-full h-32 object-contain my-3" src="./assets/car5.png" alt="">
+              <div class="flex justify-between text-sm">
+                <div class="flex gap-4 text-[#806C91]">
+                  <span><i class="fa-regular fa-user text-[#A370E6]"></i> 4</span>
+                  <span><i class="fa-solid fa-share"></i> Manual</span>
+                </div>
+                <p>$400<span class="text-[#806C91]">/d</span></p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="rounded-lg bg-[#FFF4CD] p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <p class="text-sm font-semibold">Porshe 718 Cayman S</p>
+                  <span class="text-xs text-[#806C91]">Coupe</span>
+                </div>
+                <i class="fa-solid fa-heart text-red-500"></i>
+              </div>
+              <img class="w-full h-32 object-contain my-3" src="./assets/car6.png" alt="">
+              <div class="flex justify-between text-sm">
+                <div class="flex gap-4 text-[#806C91]">
+                  <span><i class="fa-regular fa-user text-[#A370E6]"></i> 4</span>
+                  <span><i class="fa-solid fa-share"></i> Manual</span>
+                </div>
+                <p>$400<span class="text-[#806C91]">/d</span></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
